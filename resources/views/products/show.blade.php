@@ -4,25 +4,54 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2> Show Product</h2>
+            <h2>Product Details</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('products.index') }}"> Back</a>
+            <a class="btn btn-primary btn-sm mb-2" href="{{ route('products.index') }}">
+                <i class="fa fa-arrow-left"></i> Back
+            </a>
         </div>
     </div>
 </div>
 
 <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12">
+    <div class="col-md-6">
         <div class="form-group">
-            <strong>Name:</strong>
-            {{ $product->name }}
+            <strong>Name:</strong> {{ $product->name }}
         </div>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <strong>Category:</strong> {{ $product->category }}
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <strong>Price:</strong> ${{ number_format($product->price, 2) }}
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <strong>Stock:</strong> {{ $product->stock }}
+        </div>
+    </div>
+
+    <div class="col-md-12">
         <div class="form-group">
             <strong>Details:</strong>
-            {{ $product->detail }}
+            <p>{{ $product->detail }}</p>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="form-group">
+            <strong>Status:</strong> 
+            <span class="badge {{ $product->status == 1 ? 'badge-success' : 'badge-danger' }}">
+                {{ $product->status == 1 ? 'Active' : 'Inactive' }}
+            </span>
         </div>
     </div>
 </div>
