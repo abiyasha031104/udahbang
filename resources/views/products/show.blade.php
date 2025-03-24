@@ -7,7 +7,7 @@
             <h2>Product Details</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary btn-sm mb-2" href="{{ route('products.index') }}">
+            <a class="btn btn-primary btn-sm mb-2" href="{{ route('home') }}">
                 <i class="fa fa-arrow-left"></i> Back
             </a>
         </div>
@@ -48,7 +48,7 @@
 
     <div class="col-md-12">
         <div class="form-group">
-            <strong>Status:</strong> 
+            <strong>Status:</strong>
             <span class="badge {{ $product->status == 1 ? 'badge-success' : 'badge-danger' }}">
                 {{ $product->status == 1 ? 'Active' : 'Inactive' }}
             </span>
