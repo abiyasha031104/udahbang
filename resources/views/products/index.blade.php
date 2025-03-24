@@ -35,7 +35,7 @@
     </tr>
     @foreach ($products as $product)
     <tr>
-        <td>{{ ++$i }}</td>
+        <td>{{ $products->firstItem() + $loop->index }}</td>
         <td>{{ $product->name }}</td>
         <td>{{ $product->detail }}</td>
         <td>{{ number_format($product->price, 2) }}</td>
@@ -58,15 +58,26 @@
                     <i class="fa-solid fa-pen-to-square"></i> Edit
                 </a>
                 @endcan
-
+                
                 @csrf
                 @method('DELETE')
-
+                
                 @can('product-delete')
                 <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">
                     <i class="fa-solid fa-trash"></i> Delete
                 </button>
                 @endcan
+            </form>
+            
+            <!-- Add to Cart Button -->
+               @if(Auth::User()->hasRole('User'))
+                <form action="{{ route('cart.add', $product->id) }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-warning btn-sm">
+                        <i class="fa fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </form>
+            @endif
             </form>
         </td>
     </tr>
@@ -75,5 +86,5 @@
 
 {!! $products->links() !!}
 
-<p class="text-center text-primary"><small>Tutorial by ItSolutionStuff.com</small></p>
+<p class="text-center text-primary"><small></small></p>
 @endsection
