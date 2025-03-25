@@ -48,6 +48,6 @@
         </div>
     </div>
 </form>
-<p class="text-center text-primary"><small>E-Commerce</small></p>
+<p class="text-center text-primary"><small>Powered by Larisin Aja Mart</small></p>
 
 @endsection
