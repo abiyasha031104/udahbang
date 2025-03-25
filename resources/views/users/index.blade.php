@@ -17,7 +17,7 @@
 </div>
 
 @session('success')
-    <div class="alert alert-success" role="alert"> 
+    <div class="alert alert-success" role="alert">
         {{ $value }}
     </div>
 @endsession
@@ -68,5 +68,5 @@
 
 {!! $data->links('pagination::bootstrap-5') !!}
 
-<p class="text-center text-primary"><small>E-Commerce</small></p>
+<p class="text-center text-primary"><small>Larisin Aja Mart</small></p>
 @endsection
