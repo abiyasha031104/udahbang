@@ -70,5 +70,5 @@
     </div>
 </form>
 
-<p class="text-center text-primary"><small>Tutorial by UTS PPWL</small></p>
+<p class="text-center text-primary"><small>Powered by Larisin Aja Mart</small></p>
 @endsection
