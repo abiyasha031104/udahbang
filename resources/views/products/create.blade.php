@@ -82,5 +82,5 @@
     </div>
 </form>
 
-<p class="text-center text-primary"><small>E-commerce</small></p>
+<p class="text-center text-primary"><small>Powered by Larisin Aja Mart</small></p>
 @endsection
