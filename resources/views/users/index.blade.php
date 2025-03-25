@@ -68,5 +68,5 @@
 
 {!! $data->links('pagination::bootstrap-5') !!}
 
-<p class="text-center text-primary"><small>Larisin Aja Mart</small></p>
+<p class="text-center text-primary"><small>Powered by Larisin Aja Mart</small></p>
 @endsection
